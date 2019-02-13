@@ -12,7 +12,12 @@ function draw() {
 
     canvas.addEventListener('mousemove', function (evt) {
         var mousePos = getMousePosition(canvas, evt);
-        //        var message = 'Mouse position X:' + mousePos.x + ', Y:' + mousePos.y;
-        console.log(canvas, message);
+        var width = window.parent.screen.width;
+        var height = window.parent.screen.height;
+        if (mousePos.x < 200 || mousePos.y < 200) {
+            canvas.style.backgroundColor = 'rgb(' + 256 + ',' + mousePos.x + ',' + mousePos.y + ')';
+        } else {
+            canvas.style.backgroundColor = 'rgb(' + 256 + ',' + 256 - mousePos.x + ',' + 256 - mousePos.y + ')';
+        }
     }, false);
 }
