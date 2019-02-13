@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
+
 body {
     margin: 0;
 }
@@ -6,4 +8,27 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
+    z-index: 0;
+}
+
+.hand {
+    position: absolute;
+    z-index: 1;
+    bottom: -1vh;
+    height: 80vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.title {
+    font-family: 'Libre Barcode 39 Text', cursive;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 3rem;
+    font-size: 3rem;
+    text-align: center;
 }
